@@ -1,0 +1,131 @@
+// Partials imports
+@import 'config';
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Base
+body {
+  background-color: $primary-violet;
+  background-image: $desk-bg-image;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: set-text-color($primary-violet);
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-stack;
+}
+
+a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+// Utilities 
+.container {
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+// Header 
+.header {
+  padding: 3rem 0;
+  transform: translateY(-100%);
+  transition: transform $transition-time;
+}
+
+// Main
+main {
+  margin: 3rem 0;
+
+  .main {
+    display: flex;
+
+    &-huddle-img {
+      transform: translateX(-120%);
+      transition: transform $transition-time;
+    }
+    
+    &-huddle-content {
+      margin: 3rem 0 3rem 2rem;
+      transform: translateX(120%);
+      transition: transform $transition-time;
+  
+      h2 {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+        font-family: $heading-font-stack;
+      }
+  
+      p {
+        font-family: $body-font-stack;
+        line-height: 1.6rem;
+      }
+  
+      .btn {
+        display: inline-block;
+        margin-top: 3rem;
+        padding: 1rem 4rem;
+        font-family: $body-font-stack;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 25px;
+        border: none;
+        background-color: #fff;
+        color: $primary-violet;
+        cursor: pointer;
+        box-shadow: $box-shadow;
+  
+        &:hover {
+          background-color: $primary-magenta;
+          color:#fefefe;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  transform: translateY(200%);
+  transition: transform $transition-time;
+  
+  .social {
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin: .5rem;
+      border: 1px solid #fefefe;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-magenta;
+        border-color: $primary-magenta;
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+// media queries import
+@import 'media';
